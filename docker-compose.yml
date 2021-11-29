@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  go:
+    build:
+      context: .
+      # targetを指定することで指定したDockerimageのみ作成できる(今回はdevimage)
+      target: dev
+    tty: true
+    stdin_open: true
+    volumes:
+    - .:/go/src/app
+    ports:
+    - 3000:3000

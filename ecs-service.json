@@ -1,0 +1,14 @@
+{
+  "cluster": "dockerfile-production-cluster",
+  "serviceName": "dockerfile-production-service",
+  "taskDefinition": "dockerfile-production-service",
+  "loadBalancers": [
+      {
+          "targetGroupArn": "",
+          "containerName": "dockerfile-production-service",
+          "containerPort": 3000
+      }
+  ],
+  "desiredCount": 1,
+  "role": "ecsServiceRole"
+}

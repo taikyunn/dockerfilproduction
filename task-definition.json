@@ -1,0 +1,21 @@
+{
+  "family": "dockerfile-production-service",
+  "containerDefinitions": [
+      {
+          "name": "dockerfile-production-service",
+          "image": "",
+          "cpu": 128,
+          "memoryReservation": 128,
+          "portMappings": [
+              {
+                  "containerPort": 3000,
+                  "protocol": "tcp"
+              }
+          ],
+          "command": [
+              "/go/src/app/binary"
+          ],
+          "essential": true
+      }
+  ]
+}
